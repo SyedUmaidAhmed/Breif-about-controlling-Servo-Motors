@@ -1,0 +1,30 @@
+We have a lot of methods to control servo motors using Raspberry Pi Microcomputers.
+
+
+a. The Normal and pwm.ChangeDutyCycle() method [RPi.GPIO Library]
+
+b. The Efficient and smart Library of "RpiMotorLib", Installation Procedure
+
+sudo pip install rpimotorlib
+
+For details go through the link provided. It has sweep, move & step function
+
+https://github.com/gavinlyonsrepo/RpiMotorLib/blob/master/Documentation/Servo_RPI_GPIO.md
+
+
+3. The Third one is the [Pigpio Library]
+
+Instructions for Execution: https://github.com/gavinlyonsrepo/RpiMotorLib/blob/master/Documentation/Servo_pigpio.md
+
+
+IMPORTANT PRACTICAL ANALYSIS BY Gavin Lyons Repo (Tested & Verified):
+
+There are two different options for controlling the servo.
+
+* When using Rpi_GPIO option you may notice twitching at certain delays and stepsizes. This is the result of the implementation of the RPIO PWM software timing.
+
+
+* If the application requires precise control the user can pick the pigpio library which uses hardware based timing. The disadvantage being they must install another dependency
+
+
+
